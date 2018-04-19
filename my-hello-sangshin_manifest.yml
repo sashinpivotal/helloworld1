@@ -1,0 +1,11 @@
+applications:
+- name: my-hello-sangshin
+  disk_quota: 1G
+  path: target/helloworld1-0.0.1-SNAPSHOT.jar
+  env:
+    SPRING_PROFILES_ACTIVE: production
+  instances: 1
+  memory: 1G
+  routes:
+  - route: my-hello-sangshin.cfapps.io
+  stack: cflinuxfs2
